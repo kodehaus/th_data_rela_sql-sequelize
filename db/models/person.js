@@ -20,7 +20,12 @@ module.exports = (sequelize) => {
   }, { sequelize });
 
   Person.associate = (models) => {
-    Person.hasMany(models.Movie);
+    Person.hasMany(models.Movie, {
+      foreignKey: {
+        fieldName: 'directorPersonId',
+        allowNull: false
+      }
+    });
   };
 
   return Person;
