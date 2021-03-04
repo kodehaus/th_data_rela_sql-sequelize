@@ -28,7 +28,7 @@ console.log('Testing the connection to the database...');
 
     // Sync the models
     console.log('-----------------------------------');
-    await sequelize.sync({force: true})
+    await sequelize.sync({ force: true });
     console.log('Synchronizing the models with the database...');
 
     // Add People to the Database
