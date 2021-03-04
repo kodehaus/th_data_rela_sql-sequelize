@@ -84,7 +84,8 @@ console.log('Testing the connection to the database...');
     const movies = await Movie.findAll({
       include: [
         {
-          model: Person
+          model: Person,
+          as: 'director'
         }
       ]
     });

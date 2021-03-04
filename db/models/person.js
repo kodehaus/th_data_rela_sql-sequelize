@@ -21,6 +21,7 @@ module.exports = (sequelize) => {
 
   Person.associate = (models) => {
     Person.hasMany(models.Movie, {
+      as: 'director',
       foreignKey: {
         fieldName: 'directorPersonId',
         allowNull: false
